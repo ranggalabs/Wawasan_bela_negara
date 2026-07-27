@@ -266,9 +266,11 @@ body::before {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   gap: 12px;
   width: 100%;
   max-width: 320px;
+  margin: 0 auto;
   padding: 16px 32px;
   font-family: var(--font-heading);
   font-size: 1.15rem;
@@ -286,6 +288,13 @@ body::before {
   overflow: hidden;
 }
 
+.btn-primary span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
@@ -300,6 +309,7 @@ body::before {
 .btn-icon {
   font-size: 1.2rem;
   transition: transform var(--transition-fast);
+  margin-left: 4px;
 }
 
 .btn-primary:hover .btn-icon {
@@ -530,7 +540,10 @@ body::before {
 
 .quiz-actions {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 24px;
 }
 
 /* ==========================================================================
@@ -705,7 +718,13 @@ body::before {
 
 .result-actions {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+  margin: 24px auto 0 auto;
 }
 
 @keyframes fadeIn {
@@ -899,13 +918,21 @@ body::before {
 .form-actions {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
   width: 100%;
-  margin-top: 10px;
+  max-width: 320px;
+  margin: 16px auto 0 auto;
 }
 
 .btn-back-lobby {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
   padding: 12px;
   border-radius: var(--radius-sm);
   border: 1px solid rgba(255, 255, 255, 0.15);
