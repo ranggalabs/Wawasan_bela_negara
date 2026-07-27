@@ -10,13 +10,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Supabase JS Client CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <main class="app-container">
-    <!-- Halaman Pembuka (Intro Screen) -->
+    <!-- ==========================================
+         1. HALAMAN LOBBY UTAMA (Lobby Screen)
+         ========================================== -->
     <section id="screen-intro" class="quiz-card">
       <div class="corner-top-right"></div>
       <div class="corner-bottom-left"></div>
@@ -32,41 +37,222 @@
       </div>
 
       <p class="intro-subtitle">
-        Uji dan tingkatkan pemahamanmu mengenai nilai-nilai Pancasila, konstitusi, serta semangat bela negara sebagai generasi muda penerus bangsa.
+        Uji pemahaman Pancasila & Konstitusi secara interaktif. Bergabung dengan Game PIN kelas atau buat ruang kuis baru!
       </p>
 
-      <!-- SVG Hero Illustration (Tahap 6) -->
+      <!-- SVG Hero Illustration -->
       <div class="hero-image-wrapper">
         <img src="assets/images/hero-illustration.svg" alt="Ilustrasi Wayang Bela Negara" class="hero-img">
       </div>
 
-      <div class="intro-actions">
-        <button id="btn-start" class="btn-primary">
-          <span>Mulai Kuis</span>
-          <span class="btn-icon">➔</span>
+      <!-- Lobby Menu Action Cards -->
+      <div class="lobby-actions">
+        <button id="btn-goto-join" class="btn-lobby btn-primary">
+          <span class="btn-lobby-icon">🎮</span>
+          <div class="btn-lobby-text">
+            <span class="btn-title">Masuk dengan Game PIN</span>
+            <span class="btn-sub">Untuk Siswa / Peserta Kuis</span>
+          </div>
+          <span class="btn-arrow">➔</span>
         </button>
 
-        <div class="intro-info">
-          <div class="info-item">
-            <span>📝 16 Soal</span>
+        <button id="btn-goto-create" class="btn-lobby btn-secondary">
+          <span class="btn-lobby-icon">👑</span>
+          <div class="btn-lobby-text">
+            <span class="btn-title">Buat Ruang Kuis (Host)</span>
+            <span class="btn-sub">Untuk Guru / Pembina Kelas</span>
           </div>
-          <div class="info-dot"></div>
-          <div class="info-item">
-            <span>⏱️ ±5 Menit</span>
+          <span class="btn-arrow">➔</span>
+        </button>
+
+        <button id="btn-start-solo" class="btn-lobby btn-ghost">
+          <span class="btn-lobby-icon">👤</span>
+          <div class="btn-lobby-text">
+            <span class="btn-title">Latihan Mandiri (Solo)</span>
+            <span class="btn-sub">Tanpa PIN & Papan Peringkat</span>
           </div>
+          <span class="btn-arrow">➔</span>
+        </button>
+      </div>
+
+      <div class="intro-info">
+        <div class="info-item">
+          <span>📝 16 Soal</span>
+        </div>
+        <div class="info-dot"></div>
+        <div class="info-item">
+          <span>⏱️ Mode Mandiri / Kelas</span>
+        </div>
+        <div class="info-dot"></div>
+        <div class="info-item">
+          <span>🏆 Live Leaderboard</span>
         </div>
       </div>
     </section>
 
-    <!-- Halaman Alur Kuis (Quiz Screen) - Hidden initially -->
+    <!-- ==========================================
+         2. HALAMAN MASUK GAME PIN (Join Screen)
+         ========================================== -->
+    <section id="screen-join-pin" class="quiz-card hidden">
+      <div class="corner-top-right"></div>
+      <div class="corner-bottom-left"></div>
+
+      <div class="intro-badge">
+        <span>🎮 Mode Multiplayer Siswa</span>
+      </div>
+
+      <h2 class="result-title">Masuk Ruang Kuis</h2>
+
+      <div class="ornament-divider">
+        <div class="ornament-diamond"></div>
+      </div>
+
+      <form id="form-join-pin" class="form-container" onsubmit="return false;">
+        <div class="form-group">
+          <label for="input-pin" class="form-label">Game PIN (6 Digit):</label>
+          <input type="text" id="input-pin" class="form-input input-pin" placeholder="Contoh: 849201" maxlength="6" pattern="[0-9]*" inputmode="numeric" required autocomplete="off">
+        </div>
+
+        <div class="form-group">
+          <label for="input-student-name" class="form-label">Nama Lengkap Siswa:</label>
+          <input type="text" id="input-student-name" class="form-input" placeholder="Masukkan nama Anda..." required autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label for="input-student-class" class="form-label">Kelas / Kelompok:</label>
+          <input type="text" id="input-student-class" class="form-input" placeholder="Contoh: X IPA 1 / Kelompok A" required>
+        </div>
+
+        <div id="join-error-msg" class="error-banner hidden">
+          ⚠️ Game PIN tidak ditemukan atau ruangan telah ditutup.
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="btn-submit-join" class="btn-primary">
+            <span>Mulai Kuis ➔</span>
+          </button>
+          <button type="button" class="btn-secondary btn-back-lobby">
+            <span>⬅️ Kembali ke Lobby</span>
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ==========================================
+         3. HALAMAN BUAT RUANG KUIS (Create Room Screen)
+         ========================================== -->
+    <section id="screen-create-room" class="quiz-card hidden">
+      <div class="corner-top-right"></div>
+      <div class="corner-bottom-left"></div>
+
+      <div class="intro-badge">
+        <span>👑 Dashboard Guru / Host</span>
+      </div>
+
+      <h2 class="result-title">Buat Ruang Kuis</h2>
+
+      <div class="ornament-divider">
+        <div class="ornament-diamond"></div>
+      </div>
+
+      <form id="form-create-room" class="form-container" onsubmit="return false;">
+        <div class="form-group">
+          <label for="input-room-name" class="form-label">Nama Ruangan / Kuis:</label>
+          <input type="text" id="input-room-name" class="form-input" placeholder="Contoh: PKN Kelas X IPA 1" required>
+        </div>
+
+        <div class="form-group">
+          <label for="input-host-name" class="form-label">Nama Guru / Host:</label>
+          <input type="text" id="input-host-name" class="form-input" placeholder="Contoh: Pak Budi, M.Pd." required>
+        </div>
+
+        <div id="create-error-msg" class="error-banner hidden">
+          ⚠️ Gagal membuat ruangan. Periksa koneksi Supabase.
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="btn-submit-create" class="btn-primary">
+            <span>Dapatkan Game PIN 🚀</span>
+          </button>
+          <button type="button" class="btn-secondary btn-back-lobby">
+            <span>⬅️ Kembali ke Lobby</span>
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ==========================================
+         4. DASHBOARD HOST GURU (Host Dashboard Screen)
+         ========================================== -->
+    <section id="screen-host-dashboard" class="quiz-card hidden">
+      <div class="corner-top-right"></div>
+      <div class="corner-bottom-left"></div>
+
+      <div class="intro-badge">
+        <span id="host-room-title">👑 Ruang Kuis Guru</span>
+      </div>
+
+      <h2 class="result-title">Pantau Leaderboard Kelas</h2>
+
+      <div class="pin-display-box">
+        <div class="pin-label">GAME PIN RUANGAN:</div>
+        <div id="display-game-pin" class="pin-number">------</div>
+        <button id="btn-copy-pin" class="btn-copy">📋 Salin PIN</button>
+      </div>
+
+      <div class="host-meta-info">
+        <span id="host-teacher-name">Host: -</span>
+        <span class="info-dot"></span>
+        <span id="host-player-count">0 Siswa Bergabung</span>
+      </div>
+
+      <!-- Realtime Podium Top 3 -->
+      <div id="host-podium-container" class="podium-wrapper hidden">
+        <!-- Dynamically rendered top 3 -->
+      </div>
+
+      <!-- Realtime Leaderboard Table -->
+      <div class="leaderboard-box">
+        <h3 class="breakdown-title">📊 Papan Peringkat Realtime:</h3>
+        <div class="table-responsive">
+          <table class="leaderboard-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nama Siswa</th>
+                <th>Kelas</th>
+                <th>Skor</th>
+                <th>Waktu</th>
+              </tr>
+            </thead>
+            <tbody id="host-leaderboard-body">
+              <tr>
+                <td colspan="5" class="table-empty">Belum ada siswa yang menyelesaikan kuis...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="form-actions" style="margin-top: 24px;">
+        <button id="btn-close-room" class="btn-secondary btn-back-lobby">
+          <span>⬅️ Kembali ke Lobby</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         5. HALAMAN ALUR KUIS (Quiz Screen)
+         ========================================== -->
     <section id="screen-quiz" class="quiz-card hidden">
       <div class="corner-top-right"></div>
       <div class="corner-bottom-left"></div>
 
-      <!-- Quiz Header & Progress Bar -->
+      <!-- Quiz Header, Timer & Progress Bar -->
       <div class="quiz-header">
         <div class="quiz-meta">
           <span id="question-category" class="category-badge">Kategori</span>
+          <span id="quiz-timer" class="timer-badge">⏱️ 00:00</span>
           <span id="question-counter" class="question-counter">Soal 1 dari 16</span>
         </div>
         <div class="progress-container">
@@ -102,12 +288,14 @@
       </div>
     </section>
 
-    <!-- Halaman Hasil Akhir (Result Screen) - Hidden initially -->
+    <!-- ==========================================
+         6. HALAMAN HASIL AKHIR (Result Screen)
+         ========================================== -->
     <section id="screen-result" class="quiz-card hidden">
       <div class="corner-top-right"></div>
       <div class="corner-bottom-left"></div>
 
-      <!-- SVG Result Icon (Tahap 6) -->
+      <!-- SVG Result Icon -->
       <div class="result-icon-wrapper">
         <img src="assets/images/result-icon.svg" alt="Ikon Hasil Penilaian" class="result-img">
       </div>
@@ -126,13 +314,41 @@
       <div class="score-display">
         <div id="result-score-badge" class="score-badge">0 / 16</div>
         <div class="score-label">Jawaban Benar</div>
+        <div id="result-time-badge" class="time-badge">⏱️ Waktu: 00:00</div>
         <div id="result-category-tag" class="category-result-tag">Memuat...</div>
       </div>
 
-      <!-- High Score Indicator (Tahap 5) -->
+      <!-- High Score / Player Info Banner -->
       <div id="high-score-container" class="high-score-box">
         <span class="high-score-icon">👑</span>
         <span id="high-score-text" class="high-score-text">Skor terbaikmu: -</span>
+      </div>
+
+      <!-- Room Leaderboard for Player (If joined via PIN) -->
+      <div id="player-room-leaderboard" class="leaderboard-box hidden">
+        <h3 class="breakdown-title">🏆 Papan Peringkat Ruangan (PIN: <span id="player-pin-label">------</span>):</h3>
+        
+        <!-- Podium Top 3 -->
+        <div id="player-podium-container" class="podium-wrapper"></div>
+
+        <div class="table-responsive">
+          <table class="leaderboard-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nama Siswa</th>
+                <th>Kelas</th>
+                <th>Skor</th>
+                <th>Waktu</th>
+              </tr>
+            </thead>
+            <tbody id="player-leaderboard-body">
+              <tr>
+                <td colspan="5" class="table-empty">Memuat papan peringkat...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <!-- Recommendation Box -->
@@ -151,10 +367,13 @@
         </div>
       </div>
 
-      <!-- Restart Action -->
+      <!-- Restart Actions -->
       <div class="result-actions">
         <button id="btn-restart" class="btn-primary">
           <span>🔄 Coba Lagi</span>
+        </button>
+        <button class="btn-secondary btn-back-lobby">
+          <span>🏠 Kembali ke Lobby</span>
         </button>
       </div>
     </section>

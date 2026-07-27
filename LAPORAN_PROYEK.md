@@ -45,6 +45,9 @@ Wawasan_bela_negara/
 - **Tahap 6 (Aset SVG & Integrasi Visual)**: Dibuat 2 file ilustrasi SVG independen bertema wayang kulit modern (`hero-illustration.svg` dan `result-icon.svg`) dan diintegrasikan secara responsif di halaman pembuka dan hasil akhir.  
   `[STATUS: SELESAI]`
 
+- **Tahap 7 (Multiplayer Game PIN & Realtime Leaderboard Supabase)**: Dikembangkan fitur *Lobby System* ala Kahoot (Mode B: Self-Paced Room) lengkap dengan generator 6-digit Game PIN untuk Host/Guru, form masuk PIN untuk siswa, *timer* pengerjaan, serta tampilan Podium Top 3 (🥇🥈🥉) & Papan Peringkat Realtime terintegrasi Supabase.  
+  `[STATUS: SELESAI]`
+
 ---
 
 ## 3. Deviasi dari Rencana Awal
