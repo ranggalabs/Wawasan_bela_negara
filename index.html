@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cek Wawasan Bela Negara - Kuis Interaktif PKN</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="app-container">
+    <!-- Halaman Pembuka (Intro Screen) -->
+    <section id="screen-intro" class="quiz-card">
+      <div class="corner-top-right"></div>
+      <div class="corner-bottom-left"></div>
+
+      <div class="intro-badge">
+        <span>🇲🇨 Kuis Pendidikan Kewarganegaraan</span>
+      </div>
+
+      <h1 class="intro-title">Cek Wawasan<br>Bela Negara</h1>
+
+      <div class="ornament-divider">
+        <div class="ornament-diamond"></div>
+      </div>
+
+      <p class="intro-subtitle">
+        Uji dan tingkatkan pemahamanmu mengenai nilai-nilai Pancasila, konstitusi, serta semangat bela negara sebagai generasi muda penerus bangsa.
+      </p>
+
+      <!-- SVG Hero Illustration (Tahap 6) -->
+      <div class="hero-image-wrapper">
+        <img src="assets/images/hero-illustration.svg" alt="Ilustrasi Wayang Bela Negara" class="hero-img">
+      </div>
+
+      <div class="intro-actions">
+        <button id="btn-start" class="btn-primary">
+          <span>Mulai Kuis</span>
+          <span class="btn-icon">➔</span>
+        </button>
+
+        <div class="intro-info">
+          <div class="info-item">
+            <span>📝 16 Soal</span>
+          </div>
+          <div class="info-dot"></div>
+          <div class="info-item">
+            <span>⏱️ ±5 Menit</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Halaman Alur Kuis (Quiz Screen) - Hidden initially -->
+    <section id="screen-quiz" class="quiz-card hidden">
+      <div class="corner-top-right"></div>
+      <div class="corner-bottom-left"></div>
+
+      <!-- Quiz Header & Progress Bar -->
+      <div class="quiz-header">
+        <div class="quiz-meta">
+          <span id="question-category" class="category-badge">Kategori</span>
+          <span id="question-counter" class="question-counter">Soal 1 dari 16</span>
+        </div>
+        <div class="progress-container">
+          <div id="progress-bar" class="progress-bar" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <!-- Question Text -->
+      <div class="question-container">
+        <h2 id="question-text" class="question-text">Memuat pertanyaan...</h2>
+      </div>
+
+      <!-- Options List -->
+      <div id="options-container" class="options-grid">
+        <!-- Dynamically loaded option buttons -->
+      </div>
+
+      <!-- Explanation Box -->
+      <div id="explanation-box" class="explanation-box hidden">
+        <div class="explanation-title">
+          <span id="feedback-icon">💡</span>
+          <span id="feedback-status">Penjelasan</span>
+        </div>
+        <p id="explanation-text" class="explanation-text"></p>
+      </div>
+
+      <!-- Quiz Navigation Actions -->
+      <div class="quiz-actions">
+        <button id="btn-next" class="btn-primary hidden">
+          <span id="btn-next-label">Soal Berikutnya</span>
+          <span class="btn-icon">➔</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Halaman Hasil Akhir (Result Screen) - Hidden initially -->
+    <section id="screen-result" class="quiz-card hidden">
+      <div class="corner-top-right"></div>
+      <div class="corner-bottom-left"></div>
+
+      <!-- SVG Result Icon (Tahap 6) -->
+      <div class="result-icon-wrapper">
+        <img src="assets/images/result-icon.svg" alt="Ikon Hasil Penilaian" class="result-img">
+      </div>
+
+      <div class="intro-badge">
+        <span>🏆 Hasil Penilaian Kuis</span>
+      </div>
+
+      <h2 class="result-title">Wawasan Bela Negara</h2>
+
+      <div class="ornament-divider">
+        <div class="ornament-diamond"></div>
+      </div>
+
+      <!-- Total Score & Rank Category -->
+      <div class="score-display">
+        <div id="result-score-badge" class="score-badge">0 / 16</div>
+        <div class="score-label">Jawaban Benar</div>
+        <div id="result-category-tag" class="category-result-tag">Memuat...</div>
+      </div>
+
+      <!-- High Score Indicator (Tahap 5) -->
+      <div id="high-score-container" class="high-score-box">
+        <span class="high-score-icon">👑</span>
+        <span id="high-score-text" class="high-score-text">Skor terbaikmu: -</span>
+      </div>
+
+      <!-- Recommendation Box -->
+      <div class="recommendation-box">
+        <div class="recommendation-header">
+          <span>💡 Rekomendasi & Catatan</span>
+        </div>
+        <p id="result-recommendation-text" class="recommendation-text"></p>
+      </div>
+
+      <!-- Category Breakdown Grid -->
+      <div class="breakdown-container">
+        <h3 class="breakdown-title">Perolehan Skor per Kategori:</h3>
+        <div id="breakdown-grid" class="breakdown-grid">
+          <!-- Dynamically populated breakdown cards -->
+        </div>
+      </div>
+
+      <!-- Restart Action -->
+      <div class="result-actions">
+        <button id="btn-restart" class="btn-primary">
+          <span>🔄 Coba Lagi</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <p>&copy; 2026 Cek Wawasan Bela Negara &bull; Tugas Pendidikan Kewarganegaraan</p>
+  </footer>
+
+  <!-- Script JS -->
+  <script src="script.js"></script>
+</body>
+</html>

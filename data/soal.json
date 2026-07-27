@@ -1,0 +1,210 @@
+[
+  {
+    "id": 1,
+    "kategori": "Pancasila & Konstitusi",
+    "pertanyaan": "Landasan konstitusional yang secara eksplisit menyatakan bahwa setiap warga negara berhak dan wajib ikut serta dalam upaya pembelaan negara adalah...",
+    "opsi": [
+      "Pasal 27 Ayat (3) UUD 1945",
+      "Pasal 28A UUD 1945",
+      "Pasal 33 Ayat (1) UUD 1945",
+      "Pasal 34 Ayat (2) UUD 1945"
+    ],
+    "jawabanBenar": 0,
+    "penjelasan": "Pasal 27 Ayat (3) UUD 1945 menegaskan bahwa setiap warga negara berhak dan wajib ikut serta dalam upaya pembelaan negara, yang menjadi dasar hukum kewajiban bela negara bagi seluruh rakyat Indonesia."
+  },
+  {
+    "id": 2,
+    "kategori": "Pancasila & Konstitusi",
+    "pertanyaan": "Bagaimana penerapan nilai Sila Ke-3 Pancasila 'Persatuan Indonesia' yang paling tepat dalam era masyarakat digital saat ini?",
+    "opsi": [
+      "Mengisolasi diri dari pengaruh budaya asing di internet",
+      "Menghindari pertemanan dengan orang yang berbeda suku di media sosial",
+      "Menjaga keharmonisan dan tidak menyebarkan narasi adu domba berunsur SARA",
+      "Menolak semua bentuk teknologi Barat yang masuk ke Indonesia"
+    ],
+    "jawabanBenar": 2,
+    "penjelasan": "Menjaga keharmonisan serta meredam narasi adu domba berunsur SARA di dunia maya merupakan wujud nyata menjaga persatuan bangsa di era digital."
+  },
+  {
+    "id": 3,
+    "kategori": "Pancasila & Konstitusi",
+    "pertanyaan": "Kedudukan Pancasila sebagai 'Sumber dari Segala Sumber Hukum Negara' mengandung arti bahwa...",
+    "opsi": [
+      "Semua peraturan perundang-undangan di Indonesia tidak boleh bertentangan dengan Pancasila",
+      "Pancasila dapat diubah jika ada undang-undang baru yang lebih modern",
+      "Hanya lembaga eksekutif yang wajib tunduk pada nilai-nilai Pancasila",
+      "Pancasila hanya berlaku pada masa perjuangan kemerdekaan"
+    ],
+    "jawabanBenar": 0,
+    "penjelasan": "Sebagai Sumber dari Segala Sumber Hukum Negara (UU No. 12 Tahun 2011), seluruh peraturan hukum di bawahnya harus bersumber dan tidak boleh bertentangan dengan nilai-nilai Pancasila."
+  },
+  {
+    "id": 4,
+    "kategori": "Pancasila & Konstitusi",
+    "pertanyaan": "Prinsip utama Sila Ke-4 Pancasila dalam mengambil keputusan bersama di lingkungan masyarakat adalah...",
+    "opsi": [
+      "Mengutamakan suara terbanyak tanpa mendengarkan pendapat minoritas",
+      "Mengutamakan musyawarah untuk mencapai mufakat dengan semangat kekeluargaan",
+      "Menyerahkan keputusan sepenuhnya kepada ketua kelompok tanpa diskusi",
+      "Memaksa anggota kelompok untuk mengikuti kehendak pribadi"
+    ],
+    "jawabanBenar": 1,
+    "penjelasan": "Sila Ke-4 mengamanatkan musyawarah untuk mufakat dengan diliputi semangat kekeluargaan serta menghargai setiap pendapat."
+  },
+  {
+    "id": 5,
+    "kategori": "Makna Bela Negara",
+    "pertanyaan": "Apa pemaknaan yang paling tepat mengenai 'Bela Negara' bagi seorang pelajar atau mahasiswa pada era damai saat ini?",
+    "opsi": [
+      "Selalu siap mengangkat senjata dan bergabung dengan pasukan militer",
+      "Belajar dengan tekun, berkarya positif, serta berkontribusi bagi kemajuan bangsa",
+      "Mengkritik pemerintah secara destruktif di forum umum",
+      "Menutup diri dari pergaulan internasional agar tidak terkontaminasi"
+    ],
+    "jawabanBenar": 1,
+    "penjelasan": "Bela negara tidak hanya berbentuk fisik/militer, melainkan juga pengabdian sesuai profesi, seperti mahasiswa yang belajar sungguh-sungguh dan menghasilkan karya bermanfaat bagi masyarakat."
+  },
+  {
+    "id": 6,
+    "kategori": "Makna Bela Negara",
+    "pertanyaan": "Berikut ini yang BUKAN merupakan salah satu dari 5 Nilai Dasar Bela Negara adalah...",
+    "opsi": [
+      "Cinta Tanah Air",
+      "Sadar Berbangsa dan Bernegara",
+      "Etnosentrisme dan Chauvinisme",
+      "Setia pada Pancasila sebagai Ideologi Negara"
+    ],
+    "jawabanBenar": 2,
+    "penjelasan": "Etnosentrisme (mengagungkan suku sendiri) dan chauvinisme (nasionalisme sempit/berlebihan) justru bertentangan dengan nilai dasar Bela Negara yang menjunjung persatuan."
+  },
+  {
+    "id": 7,
+    "kategori": "Makna Bela Negara",
+    "pertanyaan": "Bentuk ancaman terhadap kedaulatan negara yang tidak bersifat fisik militer, melainkan merusak ideologi, ekonomi, atau sosial budaya bangsa disebut...",
+    "opsi": [
+      "Ancaman Agresi Militer",
+      "Ancaman Nirmiliter (Non-Militer)",
+      "Ancaman Invasi Teritorial",
+      "Ancaman Spionase Asing"
+    ],
+    "jawabanBenar": 1,
+    "penjelasan": "Ancaman nirmiliter berdimensi ideologi, politik, ekonomi, sosial budaya, teknologi, serta keselamatan umum yang mengganggu kedaulatan negara tanpa kontak senjata langsung."
+  },
+  {
+    "id": 8,
+    "kategori": "Makna Bela Negara",
+    "pertanyaan": "Salah satu indikator sikap 'Cinta Tanah Air' dalam kehidupan sehari-hari adalah...",
+    "opsi": [
+      "Lebih bangga menggunakan produk luar negeri karena menganggapnya lebih bergengsi",
+      "Mengabaikan kelestarian lingkungan sekitar demi keuntungan pribadi",
+      "Mengutamakan penggunaan produk dalam negeri serta menjaga nama baik bangsa",
+      "Menolak mempelajari sejarah perjuangan bangsa Indonesia"
+    ],
+    "jawabanBenar": 2,
+    "penjelasan": "Menggunakan dan mengapresiasi produk dalam negeri serta menjaga nama baik Indonesia merupakan wujud konkret dari rasa cinta tanah air."
+  },
+  {
+    "id": 9,
+    "kategori": "Isu Kontemporer",
+    "pertanyaan": "Ketika menerima berita kontroversial berpotensi provokatif di grup perpesanan, tindakan yang paling mencerminkan wawasan kebangsaan adalah...",
+    "opsi": [
+      "Langsung membagikan berita tersebut ke semua grup agar orang lain tahu",
+      "Melakukan saring sebelum sharing dengan memverifikasi fakta dari sumber terpercaya",
+      "Menambah narasi opini pribadi yang memanaskan suasana",
+      "Menghapus grup perpesanan dan menyalahkan pengirim pertama"
+    ],
+    "jawabanBenar": 1,
+    "penjelasan": "Prinsip 'saring sebelum sharing' dan cek fakta dari sumber resmi/terpercaya adalah benteng pertahanan digital dari ancaman disintegrasi akibat hoaks."
+  },
+  {
+    "id": 10,
+    "kategori": "Isu Kontemporer",
+    "pertanyaan": "Mengapa maraknya politik identitas yang memecah belah warga negara menjadi ancaman serius bagi Negara Kesatuan Republik Indonesia (NKRI)?",
+    "opsi": [
+      "Karena dapat merusak keberagaman dan mengikis persatuan nasional yang bersemboyan Bhinneka Tunggal Ika",
+      "Karena mempercepat kemajuan ekonomi daerah tertentu",
+      "Karena meningkatkan partisipasi pemilih di setiap daerah",
+      "Karena mempermudah koordinasi antarpartai politik"
+    ],
+    "jawabanBenar": 0,
+    "penjelasan": "Politik identitas yang memicu sentimen sektarian berisiko memecah belah solidaritas sosial dan mengancam keutuhan NKRI yang dibangun di atas keberagaman."
+  },
+  {
+    "id": 11,
+    "kategori": "Isu Kontemporer",
+    "pertanyaan": "Salah satu upaya memupuk 'Nasionalisme Digital' bagi generasi muda di tengah maraknya arus globalisasi adalah...",
+    "opsi": [
+      "Mempromosikan kekayaan budaya lokal dan konten edukatif Indonesia melalui platform media sosial",
+      "Menutup akses internet bagi warga negara Indonesia",
+      "Menolak berinteraksi dengan warga negara asing di platform global",
+      "Mengkritik seluruh hasil budaya bangsa sendiri karena kalah modern"
+    ],
+    "jawabanBenar": 0,
+    "penjelasan": "Nasionalisme digital diwujudkan dengan memanfaatkan platform teknologi untuk mengenalkan warisan budaya, prestasi nasional, serta narasi positif Indonesia ke kancah internasional."
+  },
+  {
+    "id": 12,
+    "kategori": "Isu Kontemporer",
+    "pertanyaan": "Sikap yang bijak dalam menghadapi maraknya paham radikalisme dan intoleransi di lingkungan sekitar adalah...",
+    "opsi": [
+      "Acuh tak acuh karena menganggap hal tersebut bukan urusan kita",
+      "Menjauhi teman yang berbeda paham tanpa pernah memberikan dialog positif",
+      "Menanamkan moderasi beragama, sikap toleransi, dan melaporkan potensi ancaman ke pihak berwenang",
+      "Mengikuti paham baru tersebut tanpa mengkaji kebenarannya"
+    ],
+    "jawabanBenar": 2,
+    "penjelasan": "Moderasi beragama dan tenggang rasa (toleransi) merupakan kearifan lokal bangsa yang efektif menangkal radikalisme dan kejahatan intoleransi."
+  },
+  {
+    "id": 13,
+    "kategori": "Kegiatan Kebangsaan",
+    "pertanyaan": "Nilai karakter kebangsaan utama yang ditanamkan dalam kegiatan Upacara Bendera di sekolah atau kampus adalah...",
+    "opsi": [
+      "Kepemimpinan, kedisiplinan, penghormatan simbol negara, dan jiwa karsa persatuan",
+      "Keahlian berbisnis dan manajemen finansial",
+      "Keterampilan olahraga individu",
+      "Kemampuan perancangan teknologi perangkat lunak"
+    ],
+    "jawabanBenar": 0,
+    "penjelasan": "Upacara bendera melatih kedisiplinan, rasa hormat pada sang Saka Merah Putih & Lagu Kebangsaan, serta menumbuhkan jiwa karsa dan kebersamaan."
+  },
+  {
+    "id": 14,
+    "kategori": "Kegiatan Kebangsaan",
+    "pertanyaan": "Gerakan Pramuka mengajarkan prinsip 'Cinta alam dan kasih sayang sesama manusia' (Dasadharma Ke-2). Bagaimana kegiatan ini mendukung upaya Bela Negara?",
+    "opsi": [
+      "Menyiapkan anggota Pramuka untuk selalu berperang di hutan",
+      "Menumbuhkan kepedulian lingkungan dan kemanusiaan sebagai fondasi ketahanan sosial bangsa",
+      "Mengajari cara bertahan hidup tanpa perlu bantuan warga masyarakat lain",
+      "Mendorong pemuda untuk hidup menyendiri di alam bebas"
+    ],
+    "jawabanBenar": 1,
+    "penjelasan": "Kepedulian terhadap lingkungan hidup dan kepedulian sosial merupakan komponen penting ketahanan nasional dan rasa cinta tanah air."
+  },
+  {
+    "id": 15,
+    "kategori": "Kegiatan Kebangsaan",
+    "pertanyaan": "Tradisi Gotong Royong yang menjadi ciri khas bangsa Indonesia memiliki peran strategis dalam...",
+    "opsi": [
+      "Mengurangi beban pemerintah sehingga masyarakat tidak perlu membayar pajak",
+      "Mempererat rasa kekeluargaan dan menyelesaikan persoalan bersama dengan asas kebersamaan",
+      "Memastikan semua orang memiliki tingkat pendapatan finansial yang sama persis",
+      "Menggantikan peran aparat hukum dalam menindak kejahatan"
+    ],
+    "jawabanBenar": 1,
+    "penjelasan": "Gotong royong memperkuat solidaritas sosial, memudarkan sikap individualis, dan menjadi modal sosial penting dalam menjaga kerukunan serta ketahanan nasional."
+  },
+  {
+    "id": 16,
+    "kategori": "Kegiatan Kebangsaan",
+    "pertanyaan": "Bagaimana peran Organisasi Kemahasiswaan/Siswa (seperti BEM atau OSIS) dalam penguatan Wawasan Nusantara?",
+    "opsi": [
+      "Membatasi keanggotaan hanya untuk suku atau agama tertentu saja",
+      "Menjadi wadah pemersatu yang inklusif, mengedukasi nilai kebangsaan, dan menangani isu sosial kemasyarakatan",
+      "Fokus pada kegiatan komersial untuk keuntungan pengurus organisasi",
+      "Mengajarkan anggota untuk memusuhi kelompok siswa dari sekolah lain"
+    ],
+    "jawabanBenar": 1,
+    "penjelasan": "Organisasi pelajar/mahasiswa berfungsi sebagai kawah candradimuka kepemimpinan muda yang inklusif dan mempraktikkan toleransi serta wawasan kebangsaan."
+  }
+]

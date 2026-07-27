@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="heroGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#8B1B22" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#131012" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="sunburst" cx="50%" cy="35%" r="40%">
+      <stop offset="0%" stop-color="#F3E5AB" stop-opacity="0.8"/>
+      <stop offset="40%" stop-color="#D4AF37" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#8B1B22" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Gold Foil Linear Gradient -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5E6B3"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#9A7B1C"/>
+    </linearGradient>
+
+    <linearGradient id="redGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A8242D"/>
+      <stop offset="100%" stop-color="#5E0F14"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base & Radiant Glow -->
+  <rect width="400" height="300" rx="16" fill="#1A161B"/>
+  <circle cx="200" cy="110" r="130" fill="url(#heroGlow)"/>
+  <circle cx="200" cy="110" r="80" fill="url(#sunburst)"/>
+
+  <!-- Ornamental Wayang Frame -->
+  <rect x="12" y="12" width="376" height="276" rx="12" fill="none" stroke="url(#goldGradient)" stroke-width="1.5" stroke-dasharray="8 4"/>
+  <rect x="18" y="18" width="364" height="264" rx="8" fill="none" stroke="#D4AF37" stroke-opacity="0.3" stroke-width="1"/>
+  
+  <!-- Wayang Corner Accents -->
+  <path d="M 12 28 L 28 12 M 12 12 L 28 28" stroke="#D4AF37" stroke-width="1.5"/>
+  <path d="M 388 28 L 372 12 M 388 12 L 372 28" stroke="#D4AF37" stroke-width="1.5"/>
+  <path d="M 12 272 L 28 288 M 12 288 L 28 272" stroke="#D4AF37" stroke-width="1.5"/>
+  <path d="M 388 272 L 372 288 M 388 288 L 372 272" stroke="#D4AF37" stroke-width="1.5"/>
+
+  <!-- Sun Rays Radiating behind Garuda -->
+  <g stroke="url(#goldGradient)" stroke-width="1" opacity="0.3">
+    <line x1="200" y1="110" x2="200" y2="20"/>
+    <line x1="200" y1="110" x2="280" y2="40"/>
+    <line x1="200" y1="110" x2="330" y2="90"/>
+    <line x1="200" y1="110" x2="330" y2="150"/>
+    <line x1="200" y1="110" x2="120" y2="40"/>
+    <line x1="200" y1="110" x2="70" y2="90"/>
+    <line x1="200" y1="110" x2="70" y2="150"/>
+  </g>
+
+  <!-- Glowing Garuda Pancasila Emblem (Center Top) -->
+  <g transform="translate(200, 105) scale(0.95)">
+    <!-- Wings Outer Glow -->
+    <path d="M 0 -35 Q -30 -40 -65 -15 Q -40 10 -20 20 L 0 35 L 20 20 Q 40 10 65 -15 Q 30 -40 0 -35 Z" fill="url(#redGradient)" opacity="0.9"/>
+    
+    <!-- Garuda Wings Gold Details -->
+    <path d="M 0 -32 C -25 -35 -55 -15 -58 -10 C -45 -2 -25 10 -15 15 L 0 25 L 15 15 C 25 10 45 -2 58 -10 C 55 -15 25 -35 0 -32 Z" fill="url(#goldGradient)"/>
+    
+    <!-- Wing Feathers Details -->
+    <path d="M -58 -10 Q -40 -25 0 -30 Q 40 -25 58 -10" fill="none" stroke="#1A161B" stroke-width="2"/>
+    <path d="M -48 -2 Q -30 -15 0 -20 Q 30 -15 48 -2" fill="none" stroke="#1A161B" stroke-width="1.5"/>
+
+    <!-- Garuda Head & Crown -->
+    <path d="M 0 -45 L 6 -32 L -6 -32 Z" fill="url(#goldGradient)"/>
+    <circle cx="0" cy="-35" r="5" fill="#FAF5EB"/>
+
+    <!-- Shield (Perisai Pancasila) -->
+    <path d="M -14 -10 L 14 -10 L 14 10 Q 14 22 0 28 Q -14 22 -14 10 Z" fill="#131012" stroke="url(#goldGradient)" stroke-width="2"/>
+    <!-- Shield Center Star -->
+    <polygon points="0,-6 2,-1 7,-1 3,2 4,7 0,4 -4,7 -3,2 -7,-1 -2,-1" fill="#F3E5AB"/>
+  </g>
+
+  <!-- Gunungan Wayang Background Silhouette (Left & Right Wings) -->
+  <path d="M 50 250 Q 80 180 120 160 Q 90 220 70 250 Z" fill="#8B1B22" opacity="0.4"/>
+  <path d="M 350 250 Q 320 180 280 160 Q 310 220 330 250 Z" fill="#8B1B22" opacity="0.4"/>
+
+  <!-- Student Silhouette (Center Standing Respectfully Facing Emblem) -->
+  <g transform="translate(200, 245)">
+    <!-- Base Platform Ornament -->
+    <path d="M -140 15 L 140 15 L 120 30 L -120 30 Z" fill="url(#goldGradient)" opacity="0.8"/>
+    <line x1="-150" y1="15" x2="150" y2="15" stroke="#D4AF37" stroke-width="2"/>
+
+    <!-- Student Body Silhouette -->
+    <!-- Head & Hair -->
+    <circle cx="0" cy="-78" r="11" fill="#FAF5EB"/>
+    <path d="M -11 -82 Q 0 -92 11 -82 Q 8 -72 -11 -82 Z" fill="#131012"/>
+    
+    <!-- Neck & Collar -->
+    <path d="M -4 -67 L 4 -67 L 5 -60 L -5 -60 Z" fill="#FAF5EB"/>
+    <path d="M -8 -60 L 0 -48 L 8 -60 Z" fill="#A8242D"/>
+
+    <!-- Shirt / Uniform -->
+    <path d="M -22 -58 L 22 -58 L 18 -10 L -18 -10 Z" fill="#FAF5EB"/>
+    
+    <!-- Arms standing at attention -->
+    <path d="M -22 -58 L -28 -25 L -20 -25 L -17 -52 Z" fill="#FAF5EB"/>
+    <path d="M 22 -58 L 28 -25 L 20 -25 L 17 -52 Z" fill="#FAF5EB"/>
+    <circle cx="-24" cy="-22" r="4" fill="#D4AF37"/>
+    <circle cx="24" cy="-22" r="4" fill="#D4AF37"/>
+
+    <!-- Trousers / Skirt -->
+    <path d="M -18 -10 L 18 -10 L 22 15 L -22 15 Z" fill="#5E0F14"/>
+  </g>
+
+  <!-- Decorative Gold Sparkles -->
+  <circle cx="100" cy="80" r="2" fill="#F3E5AB"/>
+  <circle cx="300" cy="70" r="2.5" fill="#F3E5AB"/>
+  <circle cx="70" cy="140" r="1.5" fill="#D4AF37"/>
+  <circle cx="330" cy="130" r="2" fill="#D4AF37"/>
+</svg>

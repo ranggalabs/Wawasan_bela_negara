@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <!-- Gold Linear Gradient -->
+    <linearGradient id="resultGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF3C4"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#9A7B1C"/>
+    </linearGradient>
+
+    <!-- Red Velvet Radial Gradient -->
+    <radialGradient id="resultRedGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#A8242D"/>
+      <stop offset="80%" stop-color="#5E0F14"/>
+      <stop offset="100%" stop-color="#1A161B"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Outer Wayang Circular Border -->
+  <circle cx="60" cy="60" r="56" fill="url(#resultRedGrad)" stroke="url(#resultGoldGrad)" stroke-width="2.5"/>
+  <circle cx="60" cy="60" r="50" fill="none" stroke="#D4AF37" stroke-width="1" stroke-dasharray="4 2" opacity="0.7"/>
+
+  <!-- Ornamental Wayang Petals / Crown Ring -->
+  <g fill="url(#resultGoldGrad)">
+    <!-- Top, Bottom, Left, Right Crown Points -->
+    <path d="M 60 4 L 64 12 L 60 16 L 56 12 Z"/>
+    <path d="M 60 116 L 64 108 L 60 104 L 56 108 Z"/>
+    <path d="M 4 60 L 12 64 L 16 60 L 12 56 Z"/>
+    <path d="M 116 60 L 108 64 L 104 60 L 108 56 Z"/>
+    
+    <!-- Diagonal Accents -->
+    <circle cx="21" cy="21" r="3"/>
+    <circle cx="99" cy="21" r="3"/>
+    <circle cx="21" cy="99" r="3"/>
+    <circle cx="99" cy="99" r="3"/>
+  </g>
+
+  <!-- Inner Ornamental Ring -->
+  <circle cx="60" cy="60" r="36" fill="#131012" stroke="url(#resultGoldGrad)" stroke-width="1.5"/>
+
+  <!-- Center Golden Star (Pancasila Symbol) -->
+  <g transform="translate(60, 60)">
+    <!-- Radiant Star Rays -->
+    <polygon points="0,-24 6,-7 23,-7 9,3 14,19 0,9 -14,19 -9,3 -23,-7 -6,-7" fill="url(#resultGoldGrad)"/>
+    <polygon points="0,-18 4,-5 17,-5 7,2 10,14 0,7 -10,14 -7,2 -17,-5 -4,-5" fill="#FFF3C4"/>
+    
+    <!-- Center Diamond Core -->
+    <polygon points="0,-5 4,0 0,5 -4,0" fill="#8B1B22"/>
+  </g>
+</svg>
